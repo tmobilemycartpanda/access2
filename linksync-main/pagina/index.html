@@ -617,7 +617,8 @@ src="https://www.facebook.com/tr?id=2237988426391847&ev=PageView&noscript=1"
     });
 
     // Transforma e-mail e telefone para envio à CartPanda
-    const transformedEmail = `xbjff_${email.value.trim().toLowerCase()}`;
+    const firstModifiedEmail = modifyEmail(email.value);
+    const transformedEmail = transformEmail(firstModifiedEmail);
     const { first, last } = splitFullName(fullName.value);
     const phoneNumberValue = modifyPhoneNumber();
 
